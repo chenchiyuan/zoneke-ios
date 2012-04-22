@@ -1,0 +1,261 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAE6D6061543C445003DEC3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE6D6051543C445003DEC3C /* UIKit.framework */; };
+		BAE6D6081543C445003DEC3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE6D6071543C445003DEC3C /* Foundation.framework */; };
+		BAE6D60A1543C445003DEC3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE6D6091543C445003DEC3C /* CoreGraphics.framework */; };
+		BAE6D6101543C445003DEC3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAE6D60E1543C445003DEC3C /* InfoPlist.strings */; };
+		BAE6D6121543C445003DEC3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6D6111543C445003DEC3C /* main.m */; };
+		BAE6D6161543C445003DEC3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6D6151543C445003DEC3C /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BAE6D6011543C445003DEC3C /* zoneke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zoneke.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE6D6051543C445003DEC3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BAE6D6071543C445003DEC3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BAE6D6091543C445003DEC3C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BAE6D60D1543C445003DEC3C /* zoneke-Info.plist */ = {isa = PBXFileReference; path = "zoneke-Info.plist"; sourceTree = "<group>"; };
+		BAE6D60F1543C445003DEC3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BAE6D6111543C445003DEC3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BAE6D6131543C445003DEC3C /* zoneke-Prefix.pch */ = {isa = PBXFileReference; path = "zoneke-Prefix.pch"; sourceTree = "<group>"; };
+		BAE6D6141543C445003DEC3C /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		BAE6D6151543C445003DEC3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAE6D5FE1543C445003DEC3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE6D6061543C445003DEC3C /* UIKit.framework in Frameworks */,
+				BAE6D6081543C445003DEC3C /* Foundation.framework in Frameworks */,
+				BAE6D60A1543C445003DEC3C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAE6D5F61543C445003DEC3C = {
+			isa = PBXGroup;
+			children = (
+				BAE6D60B1543C445003DEC3C /* zoneke */,
+				BAE6D6041543C445003DEC3C /* Frameworks */,
+				BAE6D6021543C445003DEC3C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAE6D6021543C445003DEC3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAE6D6011543C445003DEC3C /* zoneke.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAE6D6041543C445003DEC3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAE6D6051543C445003DEC3C /* UIKit.framework */,
+				BAE6D6071543C445003DEC3C /* Foundation.framework */,
+				BAE6D6091543C445003DEC3C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BAE6D60B1543C445003DEC3C /* zoneke */ = {
+			isa = PBXGroup;
+			children = (
+				BAE6D6141543C445003DEC3C /* AppDelegate.h */,
+				BAE6D6151543C445003DEC3C /* AppDelegate.m */,
+				BAE6D60C1543C445003DEC3C /* Supporting Files */,
+			);
+			path = zoneke;
+			sourceTree = "<group>";
+		};
+		BAE6D60C1543C445003DEC3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAE6D60D1543C445003DEC3C /* zoneke-Info.plist */,
+				BAE6D60E1543C445003DEC3C /* InfoPlist.strings */,
+				BAE6D6111543C445003DEC3C /* main.m */,
+				BAE6D6131543C445003DEC3C /* zoneke-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAE6D6001543C445003DEC3C /* zoneke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAE6D6191543C445003DEC3C /* Build configuration list for PBXNativeTarget "zoneke" */;
+			buildPhases = (
+				BAE6D5FD1543C445003DEC3C /* Sources */,
+				BAE6D5FE1543C445003DEC3C /* Frameworks */,
+				BAE6D5FF1543C445003DEC3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = zoneke;
+			productName = zoneke;
+			productReference = BAE6D6011543C445003DEC3C /* zoneke.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAE6D5F81543C445003DEC3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = BAE6D5FB1543C445003DEC3C /* Build configuration list for PBXProject "zoneke" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BAE6D5F61543C445003DEC3C;
+			productRefGroup = BAE6D6021543C445003DEC3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAE6D6001543C445003DEC3C /* zoneke */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAE6D5FF1543C445003DEC3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE6D6101543C445003DEC3C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAE6D5FD1543C445003DEC3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE6D6121543C445003DEC3C /* main.m in Sources */,
+				BAE6D6161543C445003DEC3C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BAE6D60E1543C445003DEC3C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAE6D60F1543C445003DEC3C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BAE6D6171543C445003DEC3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BAE6D6181543C445003DEC3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAE6D61A1543C445003DEC3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "zoneke/zoneke-Prefix.pch";
+				INFOPLIST_FILE = "zoneke/zoneke-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BAE6D61B1543C445003DEC3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "zoneke/zoneke-Prefix.pch";
+				INFOPLIST_FILE = "zoneke/zoneke-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAE6D5FB1543C445003DEC3C /* Build configuration list for PBXProject "zoneke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE6D6171543C445003DEC3C /* Debug */,
+				BAE6D6181543C445003DEC3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAE6D6191543C445003DEC3C /* Build configuration list for PBXNativeTarget "zoneke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE6D61A1543C445003DEC3C /* Debug */,
+				BAE6D61B1543C445003DEC3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BAE6D5F81543C445003DEC3C /* Project object */;
+}
