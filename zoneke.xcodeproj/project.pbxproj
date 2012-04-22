@@ -7,25 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAACFFA215443C6A002CB164 /* ZKItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACFFA115443C6A002CB164 /* ZKItemCell.m */; };
+		BAACFFA91544448F002CB164 /* ZKMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACFFA81544448F002CB164 /* ZKMapViewController.m */; };
+		BAACFFAB154445D7002CB164 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAACFFAA154445D7002CB164 /* MapKit.framework */; };
+		BAACFFAF154455D6002CB164 /* ZKPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACFFAE154455D6002CB164 /* ZKPublishViewController.m */; };
 		BAE6D6061543C445003DEC3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE6D6051543C445003DEC3C /* UIKit.framework */; };
 		BAE6D6081543C445003DEC3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE6D6071543C445003DEC3C /* Foundation.framework */; };
 		BAE6D60A1543C445003DEC3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE6D6091543C445003DEC3C /* CoreGraphics.framework */; };
 		BAE6D6101543C445003DEC3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAE6D60E1543C445003DEC3C /* InfoPlist.strings */; };
 		BAE6D6121543C445003DEC3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6D6111543C445003DEC3C /* main.m */; };
 		BAE6D6161543C445003DEC3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6D6151543C445003DEC3C /* AppDelegate.m */; };
+		BAE6D6241543CBFA003DEC3C /* ZKMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6D6231543CBFA003DEC3C /* ZKMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BAACFFA015443C6A002CB164 /* ZKItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKItemCell.h; sourceTree = "<group>"; };
+		BAACFFA115443C6A002CB164 /* ZKItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKItemCell.m; sourceTree = "<group>"; };
+		BAACFFA71544448F002CB164 /* ZKMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKMapViewController.h; sourceTree = "<group>"; };
+		BAACFFA81544448F002CB164 /* ZKMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKMapViewController.m; sourceTree = "<group>"; };
+		BAACFFAA154445D7002CB164 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BAACFFAD154455D6002CB164 /* ZKPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKPublishViewController.h; sourceTree = "<group>"; };
+		BAACFFAE154455D6002CB164 /* ZKPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKPublishViewController.m; sourceTree = "<group>"; };
 		BAE6D6011543C445003DEC3C /* zoneke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zoneke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE6D6051543C445003DEC3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BAE6D6071543C445003DEC3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BAE6D6091543C445003DEC3C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		BAE6D60D1543C445003DEC3C /* zoneke-Info.plist */ = {isa = PBXFileReference; path = "zoneke-Info.plist"; sourceTree = "<group>"; };
+		BAE6D60D1543C445003DEC3C /* zoneke-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "zoneke-Info.plist"; sourceTree = "<group>"; };
 		BAE6D60F1543C445003DEC3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BAE6D6111543C445003DEC3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BAE6D6131543C445003DEC3C /* zoneke-Prefix.pch */ = {isa = PBXFileReference; path = "zoneke-Prefix.pch"; sourceTree = "<group>"; };
-		BAE6D6141543C445003DEC3C /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		BAE6D6131543C445003DEC3C /* zoneke-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zoneke-Prefix.pch"; sourceTree = "<group>"; };
+		BAE6D6141543C445003DEC3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BAE6D6151543C445003DEC3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BAE6D6221543CBFA003DEC3C /* ZKMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKMainViewController.h; sourceTree = "<group>"; };
+		BAE6D6231543CBFA003DEC3C /* ZKMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAACFFAB154445D7002CB164 /* MapKit.framework in Frameworks */,
 				BAE6D6061543C445003DEC3C /* UIKit.framework in Frameworks */,
 				BAE6D6081543C445003DEC3C /* Foundation.framework in Frameworks */,
 				BAE6D60A1543C445003DEC3C /* CoreGraphics.framework in Frameworks */,
@@ -42,9 +57,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAACFF9B15443B66002CB164 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				BAACFFA015443C6A002CB164 /* ZKItemCell.h */,
+				BAACFFA115443C6A002CB164 /* ZKItemCell.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		BAACFFA615444454002CB164 /* ZKMap */ = {
+			isa = PBXGroup;
+			children = (
+				BAACFFA71544448F002CB164 /* ZKMapViewController.h */,
+				BAACFFA81544448F002CB164 /* ZKMapViewController.m */,
+			);
+			name = ZKMap;
+			sourceTree = "<group>";
+		};
+		BAACFFAC1544554A002CB164 /* ZKPublish */ = {
+			isa = PBXGroup;
+			children = (
+				BAACFFAD154455D6002CB164 /* ZKPublishViewController.h */,
+				BAACFFAE154455D6002CB164 /* ZKPublishViewController.m */,
+			);
+			name = ZKPublish;
+			sourceTree = "<group>";
+		};
 		BAE6D5F61543C445003DEC3C = {
 			isa = PBXGroup;
 			children = (
+				BAACFFAA154445D7002CB164 /* MapKit.framework */,
 				BAE6D60B1543C445003DEC3C /* zoneke */,
 				BAE6D6041543C445003DEC3C /* Frameworks */,
 				BAE6D6021543C445003DEC3C /* Products */,
@@ -72,6 +115,9 @@
 		BAE6D60B1543C445003DEC3C /* zoneke */ = {
 			isa = PBXGroup;
 			children = (
+				BAACFFAC1544554A002CB164 /* ZKPublish */,
+				BAACFFA615444454002CB164 /* ZKMap */,
+				BAE6D6201543CB93003DEC3C /* ZKMain */,
 				BAE6D6141543C445003DEC3C /* AppDelegate.h */,
 				BAE6D6151543C445003DEC3C /* AppDelegate.m */,
 				BAE6D60C1543C445003DEC3C /* Supporting Files */,
@@ -88,6 +134,16 @@
 				BAE6D6131543C445003DEC3C /* zoneke-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BAE6D6201543CB93003DEC3C /* ZKMain */ = {
+			isa = PBXGroup;
+			children = (
+				BAACFF9B15443B66002CB164 /* views */,
+				BAE6D6221543CBFA003DEC3C /* ZKMainViewController.h */,
+				BAE6D6231543CBFA003DEC3C /* ZKMainViewController.m */,
+			);
+			name = ZKMain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +209,10 @@
 			files = (
 				BAE6D6121543C445003DEC3C /* main.m in Sources */,
 				BAE6D6161543C445003DEC3C /* AppDelegate.m in Sources */,
+				BAE6D6241543CBFA003DEC3C /* ZKMainViewController.m in Sources */,
+				BAACFFA215443C6A002CB164 /* ZKItemCell.m in Sources */,
+				BAACFFA91544448F002CB164 /* ZKMapViewController.m in Sources */,
+				BAACFFAF154455D6002CB164 /* ZKPublishViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +314,7 @@
 				BAE6D61B1543C445003DEC3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

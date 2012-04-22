@@ -11,9 +11,11 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize mainViewController = _mainViewController;
 
 - (void)dealloc
 {
+    [_mainViewController release];
     [_window release];
     [super dealloc];
 }
@@ -23,6 +25,12 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    ZKMainViewController *zkMainViewController = [[ZKMainViewController alloc] init];
+    _mainViewController = [[UINavigationController alloc] initWithRootViewController:zkMainViewController];
+    [zkMainViewController release];
+    
+    [self.window addSubview: self.mainViewController.view];
     [self.window makeKeyAndVisible];
     return YES;
 }
