@@ -1,18 +1,18 @@
 //
-//  ZKMapViewController.m
+//  ZKExploreViewController.m
 //  zoneke
 //
-//  Created by tukeQ tukeQ on 12-4-22.
+//  Created by tukeQ tukeQ on 12-4-23.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "ZKMapViewController.h"
+#import "ZKExploreViewController.h"
 
-@implementation ZKMapViewController
-@synthesize mapView = _mapView;
+@implementation ZKExploreViewController
+@synthesize name = _name;
 
 -(void)dealloc{
-    [_mapView release];
+    [_name release];
     [super dealloc];
 }
 
@@ -20,8 +20,14 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
+    return self;
+}
+
+-(id) initWithName:(NSString *) name{
+    self = [self initWithNibName:nil bundle:nil];
+    self.name = name;
     return self;
 }
 
@@ -40,22 +46,22 @@
 - (void)loadView
 {
     [super loadView];
-    _mapView = [[MKMapView alloc] initWithFrame: self.view.bounds]; 
-    [self.view addSubview: self.mapView];
-    self.mapView.showsUserLocation = YES;
-    self.title = @"map view";
+    self.title = self.name;
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 50, 200, 50)];
+    label.text = self.name;
+    [self.view addSubview: label];
+    [label release];
 }
 
 
-
+/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    
 }
-
+*/
 
 - (void)viewDidUnload
 {

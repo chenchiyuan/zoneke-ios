@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "ZKPublishViewController.h"
+#import "MTStatusBarOverlay.h"
 
-@interface ZKMainViewController : UIViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
+@interface ZKMainViewController : UIViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate, MTStatusBarOverlayDelegate>
 
 @property (nonatomic, retain) UIScrollView *scrollView;
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) UIView *backView;
 @property (nonatomic, retain) ZKPublishViewController *publishViewController;
 @property (nonatomic, assign) CGPoint origin; 
+@property (nonatomic, assign) bool freshing;
+@property (nonatomic, retain) MTStatusBarOverlay *statusBar;
 @end

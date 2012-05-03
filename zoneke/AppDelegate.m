@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  zoneke
 //
-//  Created by tukeQ tukeQ on 12-4-22.
+//  Created by Shadow on 12-4-22.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
@@ -23,7 +23,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
     ZKMainViewController *zkMainViewController = [[ZKMainViewController alloc] init];

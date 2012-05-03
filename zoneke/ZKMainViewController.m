@@ -10,6 +10,9 @@
 #import "ZKItemCell.h"
 #import "ZKMapViewController.h"
 #import "ZKPublishViewController.h"
+#import "ZKExploreViewController.h"
+#import "ZKLoadMoreCell.h"
+#import "MTStatusBarOverlay.h"
 
 @implementation ZKMainViewController
 @synthesize scrollView = _scrollView;
@@ -17,8 +20,11 @@
 @synthesize backView = _backView;
 @synthesize publishViewController = _publishViewController;
 @synthesize origin;
+@synthesize freshing;
+@synthesize statusBar = _statusBar;
 
 - (void)dealloc{
+    [_statusBar release];
     [_publishViewController release];
     [_backView release];
     [_tableView release];
@@ -31,6 +37,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         origin = CGPointMake(0, 0);
+        freshing = NO;
     }
     return self;
 }
@@ -62,7 +69,7 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"地图" style:UIBarButtonItemStyleBordered target:self action:@selector(selectMap)];
     self.navigationItem.rightBarButtonItem = rightItem;
     [rightItem release];
-    
+     
     
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"提问" style:UIBarButtonItemStyleBordered target:self action: @selector(selectPublish)];
     self.navigationItem.leftBarButtonItem = leftItem;
@@ -102,15 +109,38 @@
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear: animated];
+    freshing = NO;
+    NSLog(@"did load view");
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if (_statusBar == nil){
+        _statusBar = [MTStatusBarOverlay sharedInstance];
+        _statusBar.animation = MTStatusBarOverlayAnimationFallDown;  // MTStatusBarOverlayAnimationShrink
+        _statusBar.detailViewMode = MTDetailViewModeCustom;         // enable automatic history-tracking and show in detail-view
+        _statusBar.delegate = self;
+        _statusBar.progress = 0.0;
+        [_statusBar postMessage:@"发送问题..."];
+        _statusBar.progress = 0.1;
+        // ...
+        [_statusBar postMessage:@"网络传输中..." animated:NO];
+        _statusBar.progress = 0.5;
+        // ...
+        [_statusBar postImmediateFinishMessage:@"得到数据，处理中..." duration:2.0 animated:YES];
+        _statusBar.progress = 1.0;
+    }
 }
 
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -123,18 +153,37 @@
 
 #pragma ScrollView Delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{     
-    NSLog(@"offset x %f", scrollView.contentOffset.x);
+    NSLog(@"offset x %f, y %f", scrollView.contentOffset.x, scrollView.contentOffset.y);
+    float totalOffsetY = ([[UIFont familyNames] count] + 1) *60 - self.tableView.bounds.size.height;
+    if (scrollView.contentOffset.y > totalOffsetY + 100 && !freshing){
+        freshing = YES;
+        NSIndexPath *path = [NSIndexPath indexPathForRow:[[UIFont familyNames] count] inSection:0];
+        [self.tableView selectRowAtIndexPath: path animated:YES scrollPosition: UITableViewScrollPositionNone];
+    }
     CGPoint offset = scrollView.contentOffset;
     if (offset.x < 0){
         self.scrollView.contentOffset = CGPointMake(0, offset.y);
     }
-    if ((offset.x - origin.x) > 0){
-        if (offset.x > 40) self.scrollView.contentOffset = CGPointMake(offset.x, offset.y);
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    NSLog(@"End deceleratiing");
+    CGPoint currentOffset = self.scrollView.contentOffset;
+    if (currentOffset.x < 40){
+        self.scrollView.contentOffset = CGPointMake(0, currentOffset.y);
     }else{
-        if (offset.x <= 40) self.scrollView.contentOffset = CGPointMake(0, offset.y); 
+        self.scrollView.contentOffset = CGPointMake(100, currentOffset.y);
     }
-    
-    self.origin = scrollView.contentOffset;
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    NSLog(@"End Dragging");
+    CGPoint currentOffset = self.scrollView.contentOffset;
+    if (currentOffset.x < 40){
+        self.scrollView.contentOffset = CGPointMake(0, currentOffset.y);
+    }else{
+        self.scrollView.contentOffset = CGPointMake(100, currentOffset.y);
+    }
 }
 
 
@@ -145,28 +194,46 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([indexPath row] == [[UIFont familyNames] count]) {
+        static NSString * moreCellIdentifier = @"ZKLoadMoreCell";
+        ZKLoadMoreCell * more = [self.tableView dequeueReusableCellWithIdentifier: moreCellIdentifier];
+        if (more == nil){
+            more = [[[ZKLoadMoreCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:moreCellIdentifier] autorelease];
+        }
+        more.selectionStyle = UITableViewCellSelectionStyleNone;    
+        return more;
+    }
+    
     static NSString * itemCellIdentifier = @"ZKItemCell";
     ZKItemCell *itemCell = [self.tableView dequeueReusableCellWithIdentifier: itemCellIdentifier];
     if (itemCell == nil){
         itemCell = [[[ZKItemCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:itemCellIdentifier] autorelease];
     }
-    [itemCell loadData: [indexPath row]];
+    itemCell.num = [indexPath row];
+    [itemCell loadData];
     return itemCell;
     
 }
 
-#pragma TableView DataSource
+#pragma mark - TableView DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return [[UIFont familyNames] count] + 1;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"did select %d", [indexPath row]);
+    if ([indexPath row] == [[UIFont familyNames] count]){
+        return;
+    }
+    
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    ZKExploreViewController *exploreViewController = [[ZKExploreViewController alloc] initWithName: [NSString stringWithFormat:@"tukeqQ num %d", [indexPath row]]];
+    [self.navigationController pushViewController:exploreViewController animated:YES];
+    [exploreViewController release];
 }
 
-#pragma AlertView Delegate
+#pragma mark - AlertView Delegate
 - (void)alertViewCancel:(UIAlertView *)alertView{
     self.backView.hidden = YES;
 }

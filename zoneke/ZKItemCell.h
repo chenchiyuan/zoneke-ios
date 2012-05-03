@@ -10,5 +10,6 @@
 
 @interface ZKItemCell : UITableViewCell
 
--(void) loadData:(int) num;
+@property (nonatomic, assign) int num;
+-(void) loadData;
 @end

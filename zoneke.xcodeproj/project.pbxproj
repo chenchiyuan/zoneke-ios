@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA61888F1552450F00EFB67E /* ZKLoadMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA61888E1552450F00EFB67E /* ZKLoadMoreCell.m */; };
+		BA6188B01552548C00EFB67E /* MTStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6188AF1552548C00EFB67E /* MTStatusBarOverlay.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		BA6188B81552616400EFB67E /* CMPopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6188B71552616400EFB67E /* CMPopTipView.m */; };
 		BAACFFA215443C6A002CB164 /* ZKItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACFFA115443C6A002CB164 /* ZKItemCell.m */; };
 		BAACFFA91544448F002CB164 /* ZKMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACFFA81544448F002CB164 /* ZKMapViewController.m */; };
 		BAACFFAB154445D7002CB164 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAACFFAA154445D7002CB164 /* MapKit.framework */; };
 		BAACFFAF154455D6002CB164 /* ZKPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACFFAE154455D6002CB164 /* ZKPublishViewController.m */; };
+		BAE3FF1715459AD600B938CC /* bg-addbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE3FF1615459AD600B938CC /* bg-addbutton.png */; };
+		BAE3FF1B1545A1A300B938CC /* UIView+UIView_SeeSubviews.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE3FF1A1545A1A300B938CC /* UIView+UIView_SeeSubviews.m */; };
+		BAE3FF221545B0BF00B938CC /* ZKItemCellText.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE3FF211545B0BF00B938CC /* ZKItemCellText.m */; };
 		BAE6D6061543C445003DEC3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE6D6051543C445003DEC3C /* UIKit.framework */; };
 		BAE6D6081543C445003DEC3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE6D6071543C445003DEC3C /* Foundation.framework */; };
 		BAE6D60A1543C445003DEC3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE6D6091543C445003DEC3C /* CoreGraphics.framework */; };
@@ -18,9 +24,16 @@
 		BAE6D6121543C445003DEC3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6D6111543C445003DEC3C /* main.m */; };
 		BAE6D6161543C445003DEC3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6D6151543C445003DEC3C /* AppDelegate.m */; };
 		BAE6D6241543CBFA003DEC3C /* ZKMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6D6231543CBFA003DEC3C /* ZKMainViewController.m */; };
+		BAE7BB9E1545452900D054D0 /* ZKExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE7BB9D1545452900D054D0 /* ZKExploreViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA61888D1552450F00EFB67E /* ZKLoadMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKLoadMoreCell.h; sourceTree = "<group>"; };
+		BA61888E1552450F00EFB67E /* ZKLoadMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKLoadMoreCell.m; sourceTree = "<group>"; };
+		BA6188AE1552548C00EFB67E /* MTStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTStatusBarOverlay.h; path = ../../MTStatusBarOverlay/MTStatusBarOverlay.h; sourceTree = "<group>"; };
+		BA6188AF1552548C00EFB67E /* MTStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTStatusBarOverlay.m; path = ../../MTStatusBarOverlay/MTStatusBarOverlay.m; sourceTree = "<group>"; };
+		BA6188B61552616400EFB67E /* CMPopTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMPopTipView.h; path = ../../CMPopTipView/CMPopTipView/CMPopTipView.h; sourceTree = "<group>"; };
+		BA6188B71552616400EFB67E /* CMPopTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMPopTipView.m; path = ../../CMPopTipView/CMPopTipView/CMPopTipView.m; sourceTree = "<group>"; };
 		BAACFFA015443C6A002CB164 /* ZKItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKItemCell.h; sourceTree = "<group>"; };
 		BAACFFA115443C6A002CB164 /* ZKItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKItemCell.m; sourceTree = "<group>"; };
 		BAACFFA71544448F002CB164 /* ZKMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKMapViewController.h; sourceTree = "<group>"; };
@@ -28,6 +41,11 @@
 		BAACFFAA154445D7002CB164 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BAACFFAD154455D6002CB164 /* ZKPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKPublishViewController.h; sourceTree = "<group>"; };
 		BAACFFAE154455D6002CB164 /* ZKPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKPublishViewController.m; sourceTree = "<group>"; };
+		BAE3FF1615459AD600B938CC /* bg-addbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg-addbutton.png"; path = "../../../web_projects/AwesomeMenu/AwesomeMenu/Images/bg-addbutton.png"; sourceTree = "<group>"; };
+		BAE3FF191545A1A300B938CC /* UIView+UIView_SeeSubviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIView_SeeSubviews.h"; sourceTree = "<group>"; };
+		BAE3FF1A1545A1A300B938CC /* UIView+UIView_SeeSubviews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIView_SeeSubviews.m"; sourceTree = "<group>"; };
+		BAE3FF201545B0BF00B938CC /* ZKItemCellText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKItemCellText.h; sourceTree = "<group>"; };
+		BAE3FF211545B0BF00B938CC /* ZKItemCellText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKItemCellText.m; sourceTree = "<group>"; };
 		BAE6D6011543C445003DEC3C /* zoneke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zoneke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE6D6051543C445003DEC3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BAE6D6071543C445003DEC3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,6 +58,8 @@
 		BAE6D6151543C445003DEC3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BAE6D6221543CBFA003DEC3C /* ZKMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKMainViewController.h; sourceTree = "<group>"; };
 		BAE6D6231543CBFA003DEC3C /* ZKMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKMainViewController.m; sourceTree = "<group>"; };
+		BAE7BB9C1545452900D054D0 /* ZKExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKExploreViewController.h; sourceTree = "<group>"; };
+		BAE7BB9D1545452900D054D0 /* ZKExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKExploreViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +77,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA6188AC1552546A00EFB67E /* MBStatusOverLay */ = {
+			isa = PBXGroup;
+			children = (
+				BA6188AE1552548C00EFB67E /* MTStatusBarOverlay.h */,
+				BA6188AF1552548C00EFB67E /* MTStatusBarOverlay.m */,
+			);
+			name = MBStatusOverLay;
+			sourceTree = "<group>";
+		};
+		BA6188B51552614700EFB67E /* CMPopView */ = {
+			isa = PBXGroup;
+			children = (
+				BA6188B61552616400EFB67E /* CMPopTipView.h */,
+				BA6188B71552616400EFB67E /* CMPopTipView.m */,
+			);
+			name = CMPopView;
+			sourceTree = "<group>";
+		};
+		BA8210BB15523EBB00C4712E /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				BA6188B51552614700EFB67E /* CMPopView */,
+				BA6188AC1552546A00EFB67E /* MBStatusOverLay */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
 		BAACFF9B15443B66002CB164 /* views */ = {
 			isa = PBXGroup;
 			children = (
 				BAACFFA015443C6A002CB164 /* ZKItemCell.h */,
 				BAACFFA115443C6A002CB164 /* ZKItemCell.m */,
+				BAE3FF201545B0BF00B938CC /* ZKItemCellText.h */,
+				BAE3FF211545B0BF00B938CC /* ZKItemCellText.m */,
+				BA61888D1552450F00EFB67E /* ZKLoadMoreCell.h */,
+				BA61888E1552450F00EFB67E /* ZKLoadMoreCell.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -82,6 +133,23 @@
 				BAACFFAE154455D6002CB164 /* ZKPublishViewController.m */,
 			);
 			name = ZKPublish;
+			sourceTree = "<group>";
+		};
+		BAE3FF1415459AAC00B938CC /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				BAE3FF1615459AD600B938CC /* bg-addbutton.png */,
+			);
+			name = Resouces;
+			sourceTree = "<group>";
+		};
+		BAE3FF181545A14300B938CC /* ZKUtils */ = {
+			isa = PBXGroup;
+			children = (
+				BAE3FF191545A1A300B938CC /* UIView+UIView_SeeSubviews.h */,
+				BAE3FF1A1545A1A300B938CC /* UIView+UIView_SeeSubviews.m */,
+			);
+			name = ZKUtils;
 			sourceTree = "<group>";
 		};
 		BAE6D5F61543C445003DEC3C = {
@@ -115,6 +183,10 @@
 		BAE6D60B1543C445003DEC3C /* zoneke */ = {
 			isa = PBXGroup;
 			children = (
+				BA8210BB15523EBB00C4712E /* Lib */,
+				BAE3FF181545A14300B938CC /* ZKUtils */,
+				BAE3FF1415459AAC00B938CC /* Resouces */,
+				BAE7BB9A1545450B00D054D0 /* ZKExplore */,
 				BAACFFAC1544554A002CB164 /* ZKPublish */,
 				BAACFFA615444454002CB164 /* ZKMap */,
 				BAE6D6201543CB93003DEC3C /* ZKMain */,
@@ -144,6 +216,15 @@
 				BAE6D6231543CBFA003DEC3C /* ZKMainViewController.m */,
 			);
 			name = ZKMain;
+			sourceTree = "<group>";
+		};
+		BAE7BB9A1545450B00D054D0 /* ZKExplore */ = {
+			isa = PBXGroup;
+			children = (
+				BAE7BB9C1545452900D054D0 /* ZKExploreViewController.h */,
+				BAE7BB9D1545452900D054D0 /* ZKExploreViewController.m */,
+			);
+			name = ZKExplore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAE6D6101543C445003DEC3C /* InfoPlist.strings in Resources */,
+				BAE3FF1715459AD600B938CC /* bg-addbutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +295,12 @@
 				BAACFFA215443C6A002CB164 /* ZKItemCell.m in Sources */,
 				BAACFFA91544448F002CB164 /* ZKMapViewController.m in Sources */,
 				BAACFFAF154455D6002CB164 /* ZKPublishViewController.m in Sources */,
+				BAE7BB9E1545452900D054D0 /* ZKExploreViewController.m in Sources */,
+				BAE3FF1B1545A1A300B938CC /* UIView+UIView_SeeSubviews.m in Sources */,
+				BAE3FF221545B0BF00B938CC /* ZKItemCellText.m in Sources */,
+				BA61888F1552450F00EFB67E /* ZKLoadMoreCell.m in Sources */,
+				BA6188B01552548C00EFB67E /* MTStatusBarOverlay.m in Sources */,
+				BA6188B81552616400EFB67E /* CMPopTipView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
