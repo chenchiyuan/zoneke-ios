@@ -13,6 +13,7 @@
 #import "ZKExploreViewController.h"
 #import "ZKLoadMoreCell.h"
 #import "MTStatusBarOverlay.h"
+#import "ZKDialogCell.h"
 
 @implementation ZKMainViewController
 @synthesize scrollView = _scrollView;
@@ -91,6 +92,8 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+    [self.tableView setSeparatorStyle: UITableViewCellSeparatorStyleNone];
+    
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 60)];
     self.tableView.tableFooterView =  imageView;
     [imageView release];
@@ -190,7 +193,7 @@
 #pragma TableView Delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
+    return 100;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -205,12 +208,21 @@
     }
     
     static NSString * itemCellIdentifier = @"ZKItemCell";
-    ZKItemCell *itemCell = [self.tableView dequeueReusableCellWithIdentifier: itemCellIdentifier];
+    ZKDialogCell *itemCell = [self.tableView dequeueReusableCellWithIdentifier: itemCellIdentifier];
     if (itemCell == nil){
-        itemCell = [[[ZKItemCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:itemCellIdentifier] autorelease];
+        itemCell = [[[ZKDialogCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:itemCellIdentifier] autorelease];
     }
-    itemCell.num = [indexPath row];
-    [itemCell loadData];
+    int count = [indexPath row]%2;
+    
+    if (count == 0){
+        count = 2;
+    }else{
+        count = 7;
+    }
+    
+    [itemCell loadData:count content:@"大家来发掘束带结发拉斯加路费老大说家乐福安定路附近了撒娇法律的撒放假拉丝机房拉萨安分"];
+//    itemCell.num = [indexPath row];
+//    [itemCell loadData];
     return itemCell;
     
 }

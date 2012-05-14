@@ -25,6 +25,10 @@
 		BAE6D6161543C445003DEC3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6D6151543C445003DEC3C /* AppDelegate.m */; };
 		BAE6D6241543CBFA003DEC3C /* ZKMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6D6231543CBFA003DEC3C /* ZKMainViewController.m */; };
 		BAE7BB9E1545452900D054D0 /* ZKExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE7BB9D1545452900D054D0 /* ZKExploreViewController.m */; };
+		BAEE873015610515001E036D /* ZKDialogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEE872F15610515001E036D /* ZKDialogCell.m */; };
+		BAEE87341561152D001E036D /* NSString+lines.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEE87331561152D001E036D /* NSString+lines.m */; };
+		BAEE873715611641001E036D /* NSString+composing.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEE873615611641001E036D /* NSString+composing.m */; };
+		BAEE873A15612494001E036D /* Composing.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEE873915612494001E036D /* Composing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,14 @@
 		BAE6D6231543CBFA003DEC3C /* ZKMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKMainViewController.m; sourceTree = "<group>"; };
 		BAE7BB9C1545452900D054D0 /* ZKExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKExploreViewController.h; sourceTree = "<group>"; };
 		BAE7BB9D1545452900D054D0 /* ZKExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKExploreViewController.m; sourceTree = "<group>"; };
+		BAEE872E15610515001E036D /* ZKDialogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKDialogCell.h; sourceTree = "<group>"; };
+		BAEE872F15610515001E036D /* ZKDialogCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKDialogCell.m; sourceTree = "<group>"; };
+		BAEE87321561152D001E036D /* NSString+lines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+lines.h"; path = "../../../britain/Britain/Additions/NSString+lines.h"; sourceTree = "<group>"; };
+		BAEE87331561152D001E036D /* NSString+lines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+lines.m"; path = "../../../britain/Britain/Additions/NSString+lines.m"; sourceTree = "<group>"; };
+		BAEE873515611641001E036D /* NSString+composing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+composing.h"; sourceTree = "<group>"; };
+		BAEE873615611641001E036D /* NSString+composing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+composing.m"; sourceTree = "<group>"; };
+		BAEE873815612494001E036D /* Composing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Composing.h; sourceTree = "<group>"; };
+		BAEE873915612494001E036D /* Composing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Composing.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +125,8 @@
 				BAE3FF211545B0BF00B938CC /* ZKItemCellText.m */,
 				BA61888D1552450F00EFB67E /* ZKLoadMoreCell.h */,
 				BA61888E1552450F00EFB67E /* ZKLoadMoreCell.m */,
+				BAEE872E15610515001E036D /* ZKDialogCell.h */,
+				BAEE872F15610515001E036D /* ZKDialogCell.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -146,8 +160,14 @@
 		BAE3FF181545A14300B938CC /* ZKUtils */ = {
 			isa = PBXGroup;
 			children = (
+				BAEE87321561152D001E036D /* NSString+lines.h */,
+				BAEE87331561152D001E036D /* NSString+lines.m */,
 				BAE3FF191545A1A300B938CC /* UIView+UIView_SeeSubviews.h */,
 				BAE3FF1A1545A1A300B938CC /* UIView+UIView_SeeSubviews.m */,
+				BAEE873515611641001E036D /* NSString+composing.h */,
+				BAEE873615611641001E036D /* NSString+composing.m */,
+				BAEE873815612494001E036D /* Composing.h */,
+				BAEE873915612494001E036D /* Composing.m */,
 			);
 			name = ZKUtils;
 			sourceTree = "<group>";
@@ -301,6 +321,10 @@
 				BA61888F1552450F00EFB67E /* ZKLoadMoreCell.m in Sources */,
 				BA6188B01552548C00EFB67E /* MTStatusBarOverlay.m in Sources */,
 				BA6188B81552616400EFB67E /* CMPopTipView.m in Sources */,
+				BAEE873015610515001E036D /* ZKDialogCell.m in Sources */,
+				BAEE87341561152D001E036D /* NSString+lines.m in Sources */,
+				BAEE873715611641001E036D /* NSString+composing.m in Sources */,
+				BAEE873A15612494001E036D /* Composing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
